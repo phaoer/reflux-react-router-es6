@@ -1,0 +1,7 @@
+body,html{
+	margin: 0;
+	padding: 0;
+}
+button,a{border:none;outline: none}
+.intro h1,.intro p{margin-left: 389px;}
+.loginAlert{color: #000000;height: 400px}
