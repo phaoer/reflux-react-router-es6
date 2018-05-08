@@ -8,7 +8,7 @@
 
 ## 依赖
 
-```html
+```javascript
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -26,9 +26,9 @@
 
 ## 使用方法
 
-###引入
+### 引入
 
-```html
+```javascript
 import React, { Component } from 'react';
 
 import ReactDOM from "react-dom";
@@ -40,16 +40,16 @@ import Actions from '../app/action/actions'; //这里我是将Action和Store分�
 import Stores from '../app/store/stores';
 ```
 
-###创建Actions
+### 创建Actions
 
 
-```html
+```javascript
 let Actions = Reflux.createActions(['action1','action2']);
 ```
 
-###创建Stores
+### 创建Stores
 
-```html
+```javascript
 class Stores extends Reflux.Store{
     constructor(){
         super();          //切记先调用super方法，Es6中子类没有this
@@ -71,10 +71,11 @@ class Stores extends Reflux.Store{
 }
 ```
 
-###挂载Stores
+### 挂载Stores
 这里我是最喜欢的，reflux给我们提供了一个Reflux.Component类，而且继承了React.Component，唯一区别就是Reflux.Component会将Store中的state自动添加到当前组件的state中，nice啊~~~
 需要注意一点的就是在调用componentWillMount和componentWillUnmount时候。
-```html
+
+```javascript
 class MyComponent extends Reflux.Component{ 
     constructor(){
         super();
